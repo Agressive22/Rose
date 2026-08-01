@@ -1,0 +1,6 @@
+@for(cat of allCategories ; track cat._id){
+  @if( $last === false){
+     <img src={{cat.image}} alt="">
+  <h2>{{cat._id}}</h2>
+  }
+}

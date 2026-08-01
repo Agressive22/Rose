@@ -1,0 +1,9 @@
+<div class="Discover gifts">
+  <h2 class="title">{{specificProduct.title}}</h2>
+ @for (image of specificProduct.images; track $index) {
+  <img [src]="image" alt="">
+
+}
+  <br>
+</div>
+

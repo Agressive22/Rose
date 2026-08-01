@@ -1,0 +1,53 @@
+:root{
+  --main-color:#f82ba9;
+
+}
+
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.box img{
+  width: 50px;
+  height: 50px;
+}
+.box .unOrderd{
+display: flex;
+    justify-content: space-between;
+    flex: 0.3;
+}
+.box .unOrderd .list{
+font-size: 25px;
+font-weight: bold;
+list-style: none;
+
+cursor: pointer;
+}
+
+// searching
+.box .search{
+  position: absolute;
+  right:100px ;
+}
+
+.box  .login{
+
+}
+.box  .login , .box .search{
+background-color: #f82ba9;
+color: white;
+font-size: 25px;
+padding: 10px;
+border-radius: 8px;
+}
+.active{
+  color: #f82ba9
+}
+// shared style
+a{
+  text-decoration: none;
+color: black;
+}

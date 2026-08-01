@@ -1,0 +1,317 @@
+// start global rules
+
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img{
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+button{
+   width: 114px;
+  height: 40px;
+ border-radius: 12px;
+ border: none;
+ background-color: #f82ba9;
+ color: white;
+ cursor: pointer;
+}
+button.shop{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color:#8C52FF;
+  color: white;
+  font-size: 20px;
+}
+
+// start design home section
+.container{
+  margin: 50px auto;
+  padding: 15px;
+  text-align: center;
+  width: 1441px;
+}
+.container .bigBox{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.container .bigBox .box{
+display: flex;
+    background-color: #fdecf6;
+    width: 240px;
+    height: 100px;
+    border-radius: 12px;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .bigBox .box i{
+      font-size: 42px;
+    color: white;
+    background-color: #f82ba9;
+    margin-left: 6px;
+    width: 77px;
+    height: 64px;
+    line-height: 60px;
+    border-radius: 30px;
+
+}
+.container .bigBox .box .text{
+    font-size: 20px;
+    font-weight: bold;
+}
+.container .bigBox .box .text h3 {
+margin-bottom: 5px;
+}
+.container .bigBox .box .text span{
+opacity: 0.6;
+}
+
+// design special gifts
+.container .giftImages{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 22px;
+}
+
+//design gift one
+.container .giftImages .gift1 img{
+width: 301px;
+height: 440px;
+}
+.container .giftImages .gift1 .details{
+    position: absolute;
+    top: 29%;
+    text-align: left;
+}
+.container .giftImages .gift1 .details span{
+    color: #f82ba9;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.container .giftImages .gift1 .details p{
+  width: 200px;
+color: #160E4B;
+font-size: 26px;
+margin-left: 20px;
+font-weight: bold;
+}
+.container .giftImages .gift1 .details button{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+// design gift 2
+.container .giftImages .gift2 img{
+  width: 956px;
+  height: 440px;
+}
+.container .giftImages .gift2 .details{
+      position: absolute;
+    top: 0;
+    text-align: left;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 400px;
+}
+.container .giftImages .gift2 .details .pGift{
+color: #f82ba9;
+font-size: 20px;
+font-weight: bold;
+
+}
+.container .giftImages .gift2 .details h2{
+font-size: 40px;
+font-weight: 700;
+color:#160E4B;
+}
+.container .giftImages .gift2 .details .para{
+font-size: 16px;
+font-weight: 400;
+color: #160E4B;
+}
+
+.container .giftImages .gift2 .details .right-arrow{
+    right: -186%;
+}
+.container .giftImages .gift2 .details .left-arrow{
+    right: -154%;
+}
+.container .giftImages .gift2 .details .left-arrow , .right-arrow{
+  position: absolute;
+    bottom: -36px;
+    font-size: 26px;
+    width: 60px
+}
+
+// design gift 3
+.container .giftImages .gift3 .details{
+  left: 16%;
+}
+
+
+// design gift 4
+.container .giftImages .gift4 .details{
+  left: 50%;
+}
+
+// design gift 5
+.container .giftImages .gift5 .details{
+  left: 83%;
+}
+.container .giftImages .gift5 .details p{
+  color: white;
+}
+
+// sharde design details and img
+.container .giftImages .gift3 img  , .container .giftImages .gift4 img  , .container .giftImages .gift5 img{
+  width: 410px;
+  height: 272px;
+}
+.container .giftImages .gift3 .details , .container .giftImages .gift4 .details , .container .giftImages .gift5 .details{
+     position: absolute;
+    bottom: 18%;
+    text-align: right;
+    width: 188px;
+    min-height: 128px;
+
+}
+.container .giftImages .gift3 .details p, .container .giftImages .gift4 .details p, .container .giftImages .gift5 .details p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #f82ba9;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.container .giftImages .gift5 .details p{
+  color: white;
+}
+
+.container .giftImages .gift3 .details h3, .container .giftImages .gift4 .details h3, .container .giftImages .gift5 .details h3{
+      color: #160E4B;
+    font-size: 20px;
+    font-weight: 700;
+}
+.container .giftImages .gift3 .details button, .container .giftImages .gift4 .details button, .container .giftImages .gift5 .details button{
+      position: absolute;
+    left: 44%;
+    bottom: -21px;
+}
+
+// start desing service
+.container .service{
+    height: 140px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FEEDF7;
+    border-radius: 12px;
+}
+.container .service .box{
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+}
+.container .service .box i{
+    background-color: #f82ba9;
+    color: white;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 47px;
+}
+.container .service .box .text h2{
+margin-bottom: 10px;
+}
+.container .service .box .text  p{
+opacity: 0.8;
+}
+
+// start designing premium gifts and popular items
+.container .premium{
+  margin-top: 100px;
+display: flex;
+}
+.container .premium .uniqueBox{
+width: 301px;
+height: 372px;
+text-align: left;
+padding: 15px;
+}
+.container .premium .uniqueBox .premiumGift{
+    color: #F82BA9;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.container .premium .uniqueBox h2{
+  width: 280px;
+    font-size: 35px;
+    color: #160E4B;
+    margin-bottom: 15px;
+}
+.container .premium .uniqueBox .text{
+    color: #c3bebe;
+     margin-bottom: 51px;
+}
+//continue designing premium gifts and start design popular items
+.container .premium .box , .container .popularItems .box{
+text-align: left;
+}
+.container .premium .box img , .container .popularItems .box img{
+width: 302px;
+height: 272px;
+margin-left: 20px;
+background-color: #fdecf6;
+}
+.container .premium .box p , .container .popularItems .box p{
+    margin: 10px 24px;
+    color: #160E4B;
+    font-size: 17px;
+    font-weight: bold;
+}
+.container .premium .box .ratings , .container .popularItems .box .ratings{
+  margin-left: 24px;
+}
+.container .premium .box .ratings i , .container .popularItems .box i{
+  margin-left: 5px;
+ color: #FBA707;
+}
+.container .premium .box .price , .container .popularItems .box .price{
+margin-left: 24px;
+color:rgb(220, 56, 56)
+}
+.container .premium .box button, .container .popularItems  .box  button {
+    position: relative;
+    left: 59%;
+    top: -7%;
+}
+
+// continue design popular items
+.container .popularItems{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.container .popularItems  .box  button i{
+  color: white;
+  margin-left: -1px;
+}
