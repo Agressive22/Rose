@@ -58,7 +58,7 @@
       <p class="pGift">Best Gift Shop</p>
       <h2>Choose Perfect Gifts From Us</h2>
       <p class="para">Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis. Rerum optio dolores et.</p>
-      <button (click) = "getId(products[1]._id)" class="shop" >Shop Now -></button>
+      <button (click) = "getId(products[1]._id)" >Shop Now -></button>
       <button class="right-arrow">></button>
       <button class="left-arrow"><</button>
 
@@ -193,9 +193,9 @@
   <!-- start create popular items -->
    <div class="popularItems">
     <!-- <h2>Popular Items</h2> -->
-     @for(image of itemImages; track $index){
+     @for(product of products.slice(0,12); track product._id){
       <div class="box">
-        <img [src] = 'image' alt="">
+        <img [src] = 'product.imgCover' alt="" (click) = getId(product._id)>
          <p>Special Gift Box</p>
       <span class="ratings">
       <i class="fa-regular fa-star"></i>
@@ -210,6 +210,53 @@
       </div>
      }
    </div>
+
+   <!-- start create about -->
+    <div class="about">
+      <div class="images">
+     @for(img of products[6].images; track $index ){
+      @if($last === false){
+        <img [src]="img" alt="">
+      }
+     }
+      </div>
+      <div class="text">
+        <p>About us</p>
+        <h2>We Provide Best And Quality Gifts Box Product For You</h2>
+        <button (click) = "getId(products[6]._id)">Discover More -></button>
+        <div class="icons">
+          <div class="icon">
+          <i class="fa-solid fa-check"></i>
+          <p>Streamlined Shipping Experience</p>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-check"></i>
+          <p>Affordable Modern Design</p>
+        </div><div class="icon">
+          <i class="fa-solid fa-check"></i>
+          <p>Competitive Price & Easy To Shop</p>
+        </div><div class="icon">
+          <i class="fa-solid fa-check"></i>
+          <p>We Made Awesome Products</p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+   <!-- start create gallery images -->
+    <div class="gallery">
+      <p>Our Gallery</p>
+      <h2>Let's Check Our Gallery</h2>
+     <div class="images">
+        @for(product of products.slice(15 , 18); track $index){
+        <img [src]="product.imgCover" alt="">
+      }
+      <img src="images/galler4.png" alt="" class="img4">
+      <img src="images/galler5.png" alt="">
+     </div>
+
+    </div>
 
 </div>
 

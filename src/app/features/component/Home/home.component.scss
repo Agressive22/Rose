@@ -10,6 +10,7 @@
 img{
   border-radius: 10px;
   background-color: black;
+  cursor: pointer;
 
 }
 
@@ -314,4 +315,98 @@ color:rgb(220, 56, 56)
 .container .popularItems  .box  button i{
   color: white;
   margin-left: -1px;
+}
+
+
+// start design about
+.container .about{
+    display: flex;
+    position: relative;
+    text-align: left;
+    margin-top: 80px;
+}
+.container .about .images{
+  flex:1;
+}
+.container .about img{
+    width: 300px;
+    height: 300px;
+    border-radius: 24px;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 0 6px black;
+}
+.container .about .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 657px;
+    height: 392px;
+}
+.container .about .text p{
+color: #F82BA9;
+font-size: 20px;
+font-weight: bold;
+}
+.container .about .text h2{
+    font-size: 33px;
+    color: #160E4B;
+    font-weight: bold;
+}
+.container .about .text button{
+width: 140px;
+}
+.container .about .text .icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container .about .text .icons .icon {
+  display: flex;
+}
+.container .about .text .icons .icon i{
+    color: white;
+    background-color: #8C52FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 38px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.container .about .text .icons .icon p{
+    color: #160E4B;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+// start design gallery
+.container .gallery{
+  margin-top: 80px;
+}
+.container .gallery p{
+    color:#f82ba9;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container .gallery h2{
+font-size: 40px;
+color: #160E4B;
+font-weight: bold;
+}
+.container .gallery .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 24px;
+}
+.container .gallery .images img{
+width: 411px;
+height: 411px;
+border-radius: 20px;
+}
+.container .gallery .images img.img4{
+  background-image: url("/images/galler4");
+width: 845px;
 }
