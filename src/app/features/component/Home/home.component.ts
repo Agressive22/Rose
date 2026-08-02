@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/productService/products.service';
 import { Router } from '@angular/router';
-import { Product } from '../../interface/product';
+
 
 
 @Component({
@@ -17,6 +17,7 @@ export class HomeComponent {
 
 
 products:any[] = []
+certiImages = []
 
 
 constructor(private prS:ProductsService , private router: Router){}
@@ -24,6 +25,7 @@ ngOnInit(){
     this.prS.getData().subscribe({
     next:(data:any)=>{
       this.products = data["products"]
+
     },
     error(err) {
       console.log(err)
@@ -32,7 +34,11 @@ ngOnInit(){
       console.log("finished");
     }
   });
-
+this.prS.getImages().subscribe({
+  next:(data:any)=>{
+    this.certiImages = data.certiImage
+  }
+})
 
 }
 getId(id:any){

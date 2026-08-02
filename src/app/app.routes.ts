@@ -4,6 +4,8 @@ import { LoginComponent } from './features/component/login/login.component';
 import { AllCategoryComponent } from './features/component/all-category/all-category.component';
 import { ProductDetailsComponent } from './features/component/product-details/product-details.component';
 
+
+
 export const routes: Routes = [
   {
     path:'home',
@@ -20,5 +22,6 @@ export const routes: Routes = [
   {
     path:'products/:id',
     component:ProductDetailsComponent
-  }
+  },
+
 ];

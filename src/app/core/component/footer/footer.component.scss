@@ -1,0 +1,49 @@
+.box{
+   width: 1441px;
+   height: 380px;
+    background-image: url(/images/footer.png);
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 14px;
+}
+.box .details{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 27px;
+    font-size: 25px;
+    color: #160E4B;
+    font-weight: bold;
+    margin-bottom: 60px;
+
+}
+.box .details p{
+  margin-left: 40px;
+   cursor: pointer;
+}
+.box h2{
+  font-size: 30px;
+  color: #160E4B;
+  margin-bottom: 40px;
+
+  span{
+    color: #F82BA9;
+  }
+  p{
+    color: #c3bebe;
+  }
+}
+
+.box .sin button{
+    border-left: 2px solid black;
+    margin-left: -13px;
+}
+.box .sin input , button{
+     padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    background-color: white;
+    border: none;
+    color: #F82BA9;
+      font-weight: 400;
+      cursor: pointer;
+}

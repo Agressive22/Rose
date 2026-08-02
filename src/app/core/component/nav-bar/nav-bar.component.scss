@@ -1,0 +1,28 @@
+a{
+  text-decoration: none;
+}
+.box{
+  display: flex;
+ align-items: center;
+ margin-top: 40px;
+}
+
+.box img{
+  width: 80px;
+}
+.box ul{
+      display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+.box ul li{
+  font-size: 35px;
+  font-weight: bold;
+  color: #160E4B;
+  text-align: center;
+  list-style:none;
+  cursor: pointer;
+}
+.active {
+  color: #F82BA9;
+}

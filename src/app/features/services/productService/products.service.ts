@@ -14,6 +14,7 @@ export class ProductsService {
   getSpecificProduct(id:any){
     return this.http.get("https://flower.elevateegy.com/api/v1/products/"+id)
   }
+
   getImages(){
     return this.http.get('data/images.json')
   }

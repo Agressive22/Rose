@@ -410,3 +410,75 @@ border-radius: 20px;
   background-image: url("/images/galler4");
 width: 845px;
 }
+
+// start design reviews
+
+.container .reviews{
+  margin-top: 80px;
+display: flex;
+background-color: #f82ba9;
+padding: 15px;
+border-radius: 12px;
+}
+.container .reviews .box{
+background-color: white;
+margin-left: 10px;
+border-radius: 10px;
+}
+.container .reviews .box .name{
+  margin-top: 10px;
+  margin-left: 10px;
+display: flex;
+}
+.container .reviews .box .name img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.container .reviews .box .name h2{
+margin-left: 20px;
+font-size: 25px;
+color: #160E4B;
+font-weight: bold;
+}
+.container .reviews .box .text{
+margin: 10px;
+color: #c3bebe;
+}
+.container .reviews .box  .rate{
+margin: 10px 0;
+text-align: left;
+}
+.container .reviews .box .rate .star{
+color: #F82BA9;
+font-size: 20px;
+margin-left: 4px;
+}
+.container .reviews .box  .rate .comment{
+color: #f82ba9b3;
+font-size: 25px;
+margin-left: 50px;
+}
+
+// start design certificated
+.container .certi{
+  margin-top: 80px;
+  background-color: #FEEDF7;
+  border-radius: 12px;
+}
+.container .certi h2{
+ font-size: 30px;
+ color: #160E4B;
+ margin: 50px 0;
+
+ span{
+  color: #F82BA9;
+ }
+}
+.container .certi .images img{
+  width: 146px;
+  height: 51px;
+  color: #c3bebe;
+  background-color: #FEEDF7;
+  margin-left: 20px;
+}

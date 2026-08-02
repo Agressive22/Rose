@@ -26,5 +26,14 @@
     "images/about2.png",
     "images/about3.png"
 
+  ],
+  "certiImage":[
+    "images/certi1.png",
+    "images/certi2.png",
+    "images/certi3.png",
+    "images/certi4.png",
+    "images/certi5.png",
+    "images/certi6.png"
+
   ]
 }
