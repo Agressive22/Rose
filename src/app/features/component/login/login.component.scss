@@ -1,0 +1,106 @@
+.form{
+    position: relative;
+    left: 32%;
+    margin: 100px 0;
+    width: 608px;
+    min-height: 390px;
+    background-color: rgba(249, 9, 157, 0.6509803922);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.form h2{
+font-size: 30px;
+text-align: center;
+}
+
+.form button , .form  input{
+  border-radius: 14px;
+  padding: 18px;
+  text-align: left;
+  margin:24px  0 40px 10px ;
+  color: black;
+  background-color: white;
+  border: none;
+}
+.form button{
+background-color:#f9099d ;
+color: white;
+font-size: 26px;
+text-align: center;
+cursor: pointer;
+}
+
+
+/* ===========================
+   Form Responsive - Mobile
+=========================== */
+
+@media (max-width:767px){
+
+  .form{
+    position: static;
+    left: 0;
+    width: 95%;
+    min-height: auto;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .form h2{
+    font-size: 24px;
+  }
+
+  .form input,
+  .form button{
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .form button{
+    font-size: 20px;
+  }
+
+}
+
+
+/* ===========================
+   Form Responsive - Tablet
+=========================== */
+
+@media (min-width:768px) and (max-width:991px){
+
+  .form{
+    position: static;
+    left: 0;
+    width: 80%;
+    margin: 60px auto;
+  }
+
+  .form input,
+  .form button{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* ===========================
+   Form Responsive - Laptop
+=========================== */
+
+@media (min-width:992px) and (max-width:1200px){
+
+  .form{
+    position: static;
+    left: 0;
+    width: 70%;
+    margin: 80px auto;
+  }
+
+}

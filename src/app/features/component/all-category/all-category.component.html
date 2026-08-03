@@ -1,6 +1,82 @@
-@for(cat of allCategories ; track cat._id){
-  @if( $last === false){
-     <img src={{cat.image}} alt="">
-  <h2>{{cat._id}}</h2>
-  }
-}
+<div class="container">
+  <div class="sideBar">
+
+      <div class="search">
+      <h2>Search</h2>
+      <input type="search" placeholder="Search by the name">
+    </div>
+
+    <div class="category">
+      <h2>Category</h2>
+      <hr>
+     <div class="inputs">
+      @for(cat of categoryCount; track cat._id){
+        <div class="box">
+        <label>
+          <input type="radio" name="cat" (click) = "getId(cat._id)" > {{cat.category}}
+        </label>
+        <span class="quantity">({{cat.productCount}})</span>
+      </div>
+      }
+      </div>
+    </div>
+    <hr>
+
+    <div class="brands">
+      <h2>Brand</h2>
+     <div class="box">
+          <label >
+        <input type="radio"> Sundoy
+      </label>
+      <span>(8)</span>
+
+     </div>
+      <div class="box">
+      <label >
+        <input type="radio"> Sahoo Gifts
+      </label>
+      <span>(8)</span>
+     </div>
+
+
+      <div class="box">
+        <label >
+        <input type="radio"> Casterly
+      </label>
+      <span>(8)</span>
+      </div>
+
+      <div class="box">
+              <label >
+        <input type="radio"> Mainden Gifts
+      </label>
+      <span>(8)</span>
+      </div>
+
+    </div>
+  </div>
+<div class="data">
+   <div class="OuterBox">
+     @for(pr of filterProduct.slice(startIndex,lastIndex); track pr._id){
+     <div class="box">
+        <img [src] = 'pr.imgCover' alt="" (click) = "sendId(pr._id) ">
+         <p class="specialGifts">Special Gift Box</p>
+      <span class="ratings">
+        @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
+          <i class="fa-solid fa-star , star"></i>
+        }
+      </span>
+      <br>
+      <span class="price">{{pr.price}}$</span>
+      <button class="shop" (click) = 'navigation(pr._id)'><i class="fa-solid fa-bag-shopping  bag" ></i></button>
+      </div>
+    }
+   </div>
+   <div class="btns">
+     <button (click) = "previous()" class="previous">Previous</button>
+   <button (click) ="next()" class="next">next</button>
+   </div>
+
+  </div>
+
+</div>

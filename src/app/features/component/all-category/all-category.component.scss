@@ -1,0 +1,214 @@
+hr{
+      width: 100px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #757F95;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .sideBar{
+  width: 302px;
+  min-height: 600px;
+}
+
+// design search input
+
+.container .sideBar .search input{
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.622);
+    background-color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+
+
+// shared design
+.container .sideBar .brands , .container .sideBar .search , .container .sideBar .category{
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 0 0 6px #00000085;
+    border-radius: 8px;
+}
+.container .sideBar .brands h2 , .container .sideBar .search h2 , .container .sideBar .category h2{
+    margin: 0 0 16px 10px;
+  padding-top: 10px;
+    font-size: 30px;
+}
+.container .sideBar .brands .box , .container .sideBar .category .inputs .box{
+ margin-left: 13px;
+  margin-bottom: 10px;
+}
+.container .sideBar .brands .box label , .container .sideBar .category .inputs .box label{
+ color: #757F95;
+    font-size: 20px;
+}
+.container .sideBar .search {
+  margin-top: 0;
+}
+
+
+// start desing data
+.container .data{
+  flex: 0.9;
+
+}
+.container .data .OuterBox {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.container .data .OuterBox .box img{
+  width: 370px;
+   height: 422px;
+    border-radius: 12px;
+    box-shadow: 0 0 4px black;
+    background-color: white;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+.container .data .OuterBox .box img:hover{
+  transform: scale(1.1);
+}
+.container .btns{
+    display: flex;
+    justify-content: space-around;
+}
+.container .btns .next ,.container .btns  .previous{
+  width: 105px;
+    padding: 10px;
+    font-size: 20px;
+    color: #F82BA9;
+    font-weight: bold;
+    border: none;
+    background-color: #160E4B;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.container .btns button.next{
+  font-size: 26px;
+}
+
+
+@media (max-width:767px){
+
+  hr{
+    margin: 15px auto;
+  }
+
+  .container{
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .container .sideBar{
+    width: 100%;
+    min-height: auto;
+  }
+
+  .container .sideBar .search input{
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    box-sizing: border-box;
+  }
+
+  .container .data{
+    width: 100%;
+  }
+
+  .container .data .OuterBox{
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .container .data .OuterBox .box img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .container .btns{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  .container .btns .next,
+  .container .btns .previous{
+    width: 180px;
+  }
+
+}
+
+
+/* ===========================
+   Category Responsive - Tablet
+=========================== */
+
+@media (min-width:768px) and (max-width:991px){
+
+  .container{
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .container .sideBar{
+    width: 100%;
+    min-height: auto;
+  }
+
+  .container .sideBar .search input{
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+  }
+
+  .container .data{
+    width: 100%;
+  }
+
+  .container .data .OuterBox{
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .container .data .OuterBox .box img{
+    width: 320px;
+    height: auto;
+  }
+
+}
+
+
+/* ===========================
+   Category Responsive - Laptop
+=========================== */
+
+@media (min-width:992px) and (max-width:1200px){
+
+  .container{
+    width: 100%;
+    gap: 25px;
+  }
+
+  .container .sideBar{
+    width: 260px;
+  }
+
+  .container .data .OuterBox .box img{
+    width: 300px;
+    height: auto;
+  }
+
+}

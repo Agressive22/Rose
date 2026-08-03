@@ -1,9 +1,52 @@
-<div class="Discover gifts">
-  <h2 class="title">{{specificProduct.title}}</h2>
- @for (image of specificProduct.images; track $index) {
-  <img [src]="image" alt="">
+<div class="container">
 
-}
-  <br>
+ <div class="leftSide">
+<div class="shownImage">
+   @for (image of specificProduct.images.slice(0,1); track $index) {
+  <img [src]="image" alt="" >
+ }
+</div>
+<div class="iconImages">
+  @for (image of specificProduct.images; track $index) {
+  <img [src]="image" alt="" >
+ }
+</div>
+ </div>
+
+<div class="rightSide">
+
+  <p class="specialGifts" style="font-size: 28px;">Special Gift Box</p>
+
+  <span class="price" style="font-size: 28px;">{{specificProduct.price}}$</span>
+
+  <p class="description">{{specificProduct.description}}</p>
+
+<div class="quantity">
+  <h3>Quantity</h3>
+  <div class="counter">
+    <button (click) = "decreament()">-</button>
+    <span class="count">{{count}}</span>
+    <button (click) = "increament()" >+</button>
+  </div>
+</div>
+
+<div class="info">
+  @if(specificProduct.quantity > 0){
+    <p class="available">Stock: Available</p>
+    <span class="numOfProducts">quantity: {{specificProduct.quantity}}</span>
+    <br>
+    <span class="sold">sold: {{specificProduct.sold}}</span>
+    <br>
+    <button class="shopping" (click) = "addToCart(specificProduct._id , count)">Add To Cart <i class="fa-solid fa-bag-shopping"></i></button>
+
+  }@else{
+    <p class="notAvailable">Stock: Out Of Stock</p>
+    <span class="sold">sold: {{specificProduct.sold}}</span>
+  }
+</div>
+
+</div>
+
+
 </div>
 

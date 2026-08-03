@@ -1,1 +1,10 @@
-<p>cart works!</p>
+
+<div class="container">
+  @for(product of cartData; track  product._id){
+   <div class="box">
+     <h2 class="product">Product</h2>
+    <img [src] = "product.product.imgCover" alt="">
+    <h2>{{product.product.title}}</h2>
+   </div>
+  }
+</div>

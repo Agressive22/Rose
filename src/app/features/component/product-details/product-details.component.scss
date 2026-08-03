@@ -1,22 +1,107 @@
-// start global rules
 
-.title{
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
+.container{
+margin-top: 60px;
+display: flex;
+justify-content: space-around;
 }
-img{
-  width: 400px;
-  height: 400px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 12px;
-  transition: all 0.8s;
+@media (max-width:768px) {
+  .container{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+  }
+}
+
+.container .leftSide{
+width: 526px;
+height: 647px;
+display: flex;
+flex-direction: column;
+}
+.container .leftSide .shownImage {
+    width: 516px;
+    height: 647px;
+    box-shadow: 0 0 6px black;
+}
+.container .leftSide .shownImage img{
+    width: 435px;
+    height: 478px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.container .leftSide .iconImages{
+margin-top: 20px;
 
 }
-img:hover{
-   transform: scale(1.1);
+.container .leftSide .iconImages img{
+  width: 120px;
+height: 120px;
+margin-left: 10px;
+border-radius: 12px;
+box-shadow: 0 0 4px black;
+cursor: pointer;
+}
+
+
+// start desing right side
+.container .rightSide{
+  width: 518px;
+
+}
+.container .rightSide .description{
+color: #cbc8c8;
+    margin: 20px 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.container .rightSide .quantity h3{
+margin-bottom: 10px;
+}
+.container .rightSide .quantity .counter{
+margin-bottom: 20px;
+}
+.container .rightSide .quantity button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #FEEDF7;
+    color: #F82BA9;
+    border: none;
+    cursor: pointer;
+}
+.container .rightSide .quantity .count{
+color: #F82BA9;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container .rightSide .info{
+    margin-top: 36px;
+}
+.container .rightSide .info p{
+margin-bottom: 10px;
+color: #bebebe;
+}
+.container .rightSide .info .numOfProducts{
+    color: #bebebe;
+}
+.container .rightSide .info .sold{
+line-height: 40px;
+    color: #bebebe;
+}
+.container .rightSide .info .shopping{
+margin: 78px 0;
+    padding: 15px;
+    border: navajowhite;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #F82BA9;
+    cursor: pointer;
+}
+.container .rightSide .info .shopping i{
+margin-left: 10px;
 }

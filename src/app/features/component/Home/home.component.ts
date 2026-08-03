@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../services/productService/products.service';
 import { Router } from '@angular/router';
-
-
+import { AuthService } from '../../services/auth/auth.service';
+import { CartService } from '../../services/cartService/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +13,11 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-
-
-
 products:any[] = []
 certiImages = []
 
 
-constructor(private prS:ProductsService , private router: Router){}
+constructor(private prS:ProductsService , private router: Router , private authService:AuthService ){}
 ngOnInit(){
     this.prS.getData().subscribe({
     next:(data:any)=>{
@@ -44,4 +41,16 @@ this.prS.getImages().subscribe({
 getId(id:any){
   this.router.navigate(['/products',id])
 }
+buyProduct(id:any){
+  if(!this.authService.isLoggedIn){
+     this.router.navigate(["/login"])
+  }
+  else{
+    this.router.navigate(['/products',id])
+  }
 }
+
+
+
+}
+

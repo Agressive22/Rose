@@ -7,3 +7,36 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+
+ .specialGifts{
+    margin: 10px 24px;
+    color: #160E4B;
+    font-size: 17px;
+    font-weight: bold;
+}
+.ratings{
+  margin-left: 24px;
+}
+ .star{
+  margin-left: 5px;
+ color: #FBA707;
+}
+.price{
+margin-left: 24px;
+color:rgb(220, 56, 56)
+}
+button.shop{
+      position: relative;
+    left: 60%;
+    top: -7%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #8C52FF;
+    font-size: 20px;
+    cursor: pointer;
+}
+  button.shop .bag {
+  color: white;
+ }

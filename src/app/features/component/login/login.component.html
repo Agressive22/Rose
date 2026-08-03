@@ -1,1 +1,16 @@
-
+<form [formGroup] = "loginForm" class="form">
+  <h2>Login To Your Account</h2>
+  <input type="email" formControlName = "email" placeholder="Enter Your Email">
+   @if(this.loginForm.get('email')?.invalid && this.loginForm.get('email')?.touched){
+      <p style="text-align: center; font-size: 20px;">enter right email</p>
+    }
+  <input type="password" formControlName = "password" placeholder="Enter Your Pass">
+  @if (this.loginForm.get('password')?.touched && this.loginForm.get('password')?.errors?.['required']){
+      <p style="text-align: center; font-size: 20px;">Password is required</p>
+    }
+    @if (this.loginForm.get('password')?.touched && this.loginForm.get('password')?.errors?.['minlength']){
+      <p style="text-align: center; font-size: 20px;">Password must be at least 8</p>
+    }
+  <button (click) = "signIn()">Login</button>
+  <button (click) = "logOut()">LogOut</button>
+</form>
