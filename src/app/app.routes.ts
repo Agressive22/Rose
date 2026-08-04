@@ -16,7 +16,6 @@ export const routes: Routes = [
   {
     path:'category',
     component:AllCategoryComponent,
-    canActivate:[authGuard]
   },
   {
     path:'login',

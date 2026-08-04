@@ -9,7 +9,7 @@ hr{
   margin: 50px auto;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .container .sideBar{
   width: 302px;
@@ -58,7 +58,7 @@ hr{
 
 // start desing data
 .container .data{
-  flex: 0.9;
+ width: 954px;
 
 }
 .container .data .OuterBox {
@@ -66,18 +66,58 @@ hr{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.container .data .OuterBox .box img{
-  width: 370px;
-   height: 422px;
-    border-radius: 12px;
-    box-shadow: 0 0 4px black;
-    background-color: white;
-    transition: all 0.6s;
+.container .data .OuterBox .box{
+    margin-left: 13px;
+  }
+.container .data .OuterBox .box .image{
+    position: relative;
+    background-color: #ffe4f4;
+    padding: 5px;
+    border-radius: 18px;
+}
+.container .data .OuterBox .box .image .icons{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 15px;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.3;
+}
+.container .data .OuterBox .box .image .icons i{
+  width: 32px;
+  height: 32px;
+  color: white;
+  background-color: #F82BA9;
+  border-radius: 50%;
+  line-height: 32px;
+
+}
+.container .data .OuterBox .box .image::before{
+  content: "";
+  position: absolute;
+  width: 302px;
+  height: 272px;
+  border-radius: 20px;
+  background-color: #f82ba9;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.container .data .OuterBox .box .image:hover::before{
+opacity: 0.6;
+}
+.container .data .OuterBox .box .image:hover .icons{
+  opacity: 1;
+}
+.container .data .OuterBox .box .image img{
+width: 302px;
+    height: 272px;
+    border-radius: 20px;
     cursor: pointer;
 }
-.container .data .OuterBox .box img:hover{
-  transform: scale(1.1);
-}
+
 .container .btns{
     display: flex;
     justify-content: space-around;
@@ -130,6 +170,7 @@ hr{
     justify-content: center;
     gap: 25px;
   }
+
 
   .container .data .OuterBox .box img{
     width: 100%;

@@ -59,7 +59,13 @@
    <div class="OuterBox">
      @for(pr of filterProduct.slice(startIndex,lastIndex); track pr._id){
      <div class="box">
-        <img [src] = 'pr.imgCover' alt="" (click) = "sendId(pr._id) ">
+        <div class="image">
+          <img [src] = 'pr.imgCover' alt="" (click) = "sendId(pr._id) ">
+          <div class="icons">
+          <i class="fa-regular fa-eye"></i>
+          <i class="fa-regular fa-heart"></i>
+         </div>
+        </div>
          <p class="specialGifts">Special Gift Box</p>
       <span class="ratings">
         @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
