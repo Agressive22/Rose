@@ -15,6 +15,7 @@ export class ProductDetailsComponent {
 constructor(private activate:ActivatedRoute , private productserive:ProductsService , private cartService:CartService) {}
 
 specificProduct! :Product;
+selectedImage :string = ''
 count:number = 1
 
 ngOnInit(){
@@ -27,11 +28,16 @@ ngOnInit(){
   this.productserive.getSpecificProduct(id).subscribe({
     next:(data:any) => {
       this.specificProduct = data.product
+      this.selectedImage = this.specificProduct.images[0]
     },
     error:(err)=>{
       console.log(err)
     }
   })
+}
+
+changeImage(image:string){
+  this.selectedImage = image
 }
 
 increament(){

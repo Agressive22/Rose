@@ -54,14 +54,14 @@
   </div>
 
   <div class="gift2">
-    <img src="images/gift2.jpg" alt="">
+    <img [src]=image alt="">
      <div class="details">
       <p class="pGift">Best Gift Shop</p>
       <h2>Choose Perfect Gifts From Us</h2>
       <p class="para">Culpa ducimus nesciunt aliquam non rerum esse recusandae omnis. Rerum optio dolores et.</p>
       <button (click) = "getId(products[1]._id)" >Shop Now -></button>
-      <button class="right-arrow">></button>
-      <button class="left-arrow"><</button>
+      <button class="right-arrow" (click) = "next()">></button>
+      <button class="left-arrow" (click) = "previous()"><</button>
 
     </div>
   </div>
@@ -144,9 +144,9 @@
 
     </div>
 
-    @for(product of products.slice(20,23); track product._id){
+    @for(product of products.slice(20,23); track product._id ; let i = $index){
       <div class="box">
-      <img [src]="product.imgCover" alt="">
+        <img [src]= premiumGiftImages[i] alt="">
       <p class="specialGifts">Special Gift Box</p>
       <span class="ratings">
      @for(st of [1,2,3,4,5]; track $index){
@@ -154,7 +154,7 @@
      }
       </span>
       <br>
-      <span class="price">250$</span>
+      <span class="price">{{product.price}}$</span>
       <button class="shop" (click) = "buyProduct(product._id)"><i class="fa-solid fa-bag-shopping"></i></button>
     </div>
     }
@@ -163,9 +163,15 @@
   <!-- start create popular items -->
    <div class="popularItems">
     <!-- <h2>Popular Items</h2> -->
-     @for(product of products.slice(0,12); track product._id){
+     @for(product of products.slice(0,12); track product._id ; let i = $index){
       <div class="box">
-        <img [src] = 'product.imgCover' alt="" (click) = getId(product._id)>
+       <div class="image">
+         <img [src] = itemImages[i] (click) = getId(product._id) title="img">
+         <div class="icons">
+          <i class="fa-regular fa-eye"></i>
+          <i class="fa-regular fa-heart"></i>
+         </div>
+       </div>
          <p class="specialGifts">Special Gift Box</p>
       <span class="ratings">
         @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
@@ -182,11 +188,15 @@
    <!-- start create about -->
     <div class="about">
       <div class="images">
-     @for(img of products[6].images; track $index ){
-      @if($last === false){
-        <img [src]="img" alt="">
-      }
-     }
+        <div class="image1">
+          <img src="images/about1.png" alt="" class="aboutImg1">
+        </div>
+       <div class="innerImages">
+         <img src="images/about2.png" alt="" class="aboutImg2">
+        <img src="images/about3.png" alt="" class="aboutImg3">
+       </div>
+
+
       </div>
       <div class="text">
         <p>About us</p>

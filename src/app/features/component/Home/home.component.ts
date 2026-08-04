@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ProductsService } from '../../services/productService/products.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
-import { CartService } from '../../services/cartService/cart.service';
+
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,12 @@ import { CartService } from '../../services/cartService/cart.service';
 export class HomeComponent {
 
 products:any[] = []
-certiImages = []
+currnetIndex = 1;
+giftImages:string[] = []
+premiumGiftImages:string[] = []
+itemImages:string[]=[]
+certiImages:string[] = [];
+image:string = "/images/gift2.jpg";
 
 
 constructor(private prS:ProductsService , private router: Router , private authService:AuthService ){}
@@ -31,11 +36,11 @@ ngOnInit(){
       console.log("finished");
     }
   });
-this.prS.getImages().subscribe({
-  next:(data:any)=>{
-    this.certiImages = data.certiImage
-  }
-})
+
+this.giftImages = this.prS.getGiftImages()
+this.premiumGiftImages = this.prS.getPremiumImages()
+this.itemImages = this.prS.getItemImages()
+this.certiImages = this.prS.getCertiImages()
 
 }
 getId(id:any){
@@ -50,6 +55,20 @@ buyProduct(id:any){
   }
 }
 
+next(){
+if(this.currnetIndex < this.giftImages.length-1){
+  this.currnetIndex++;
+  this.image = this.giftImages[this.currnetIndex]
+  console.log("ww")
+
+}
+}
+previous() {
+if(this.currnetIndex >0 ){
+  this.currnetIndex--;
+  this.image = this.giftImages[this.currnetIndex]
+}
+}
 
 
 }

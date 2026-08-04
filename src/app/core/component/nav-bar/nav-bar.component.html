@@ -1,8 +1,8 @@
 <div class="navBar">
 
-<img src="your-image-url" alt="">
+<img src="images/navBar.png" alt="">
 
-<ul>
+<ul class="unOrderedList">
 <li>
   <a routerLink="home" routerLinkActive="active">Home </a>
 </li>
@@ -10,23 +10,26 @@
 <li>
   <a routerLink="category" routerLinkActive="active">Category</a>
 </li>
+</ul>
 
-@if (!(isloggedIn | async)) {
-<li class="login">
-  <a routerLink="login">Login</a>
-</li>
+<div class="search">
+  <i class="fa-solid fa-magnifying-glass"></i>
+   @if (!(isloggedIn | async)) {
+
+  <button class="logIn">login</button>
 }
 
 @if (isloggedIn | async) {
-<li>
-  <a routerLink="cart">Cart</a>
-</li>
 
-<li>
+  <a routerLink="cart">Cart</a>
+
   <button (click)="logout()" class="logOut">Logout</button>
-</li>
 }
-</ul>
 </div>
+
+
+</div>
+
+
 
 <!-- <button class="login" routerLinkActive = "active" >Login</button> -->

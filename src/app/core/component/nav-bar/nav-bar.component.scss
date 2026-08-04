@@ -3,6 +3,7 @@ a{
 }
 .navBar{
   display: flex;
+  justify-content: space-around;
  align-items: center;
  margin-top: 40px;
 }
@@ -13,36 +14,43 @@ a{
 .navBar ul{
       display: flex;
     justify-content: space-evenly;
-    flex: 0.9;
+
 }
 .navBar ul li{
-  font-size: 35px;
-  font-weight: bold;
+  width: 88px;
+  height: 29px;
+  font-size: 16px;
+  font-weight: 500;
   color: #160E4B;
   text-align: center;
   list-style:none;
+  cursor: pointer;
+}
+.navBar  .search i{
+  color: #F82BA9;
+  width: 40px;
+  height: 36px;
+}
+
+.navBar  .search .logIn{
+  width: 80px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 30px;
+  color: white;
+  background-color: #F82BA9;
+  border: none;
   cursor: pointer;
 }
 
 .active {
    color: #F82BA9;
 }
-.login,.logOut{
-    font-size: 33px;
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    color: white;
-    background-color: #F82BA9;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-}
 
 // responsive
 
 /* ===========================
-   Mobile
+Mobile
 =========================== */
 
 @media (max-width: 767px) {

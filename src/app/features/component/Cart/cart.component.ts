@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cartService/cart.service';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-cart',
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './cart.component.scss'
 })
 export class CartComponent {
-constructor(private cartService:CartService , private http:HttpClient){}
+constructor(private cartService:CartService ){}
 cartData!:any;
 
 ngOnInit(){

@@ -3,12 +3,12 @@
  <div class="leftSide">
 <div class="shownImage">
    @for (image of specificProduct.images.slice(0,1); track $index) {
-  <img [src]="image" alt="" >
+  <img [src]="selectedImage" alt="" >
  }
 </div>
 <div class="iconImages">
   @for (image of specificProduct.images; track $index) {
-  <img [src]="image" alt="" >
+  <img [src]="image" (click) = "changeImage(image)" alt="" >
  }
 </div>
  </div>

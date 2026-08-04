@@ -68,5 +68,17 @@ next(){
     this.router.navigate(["/login"])
   }
   }
+//   search(value: any) {
+
+//   if (!value.trim()) {
+//     this.filterProduct = this.allProducts;
+//     return;
+//   }
+
+//   this.filterProduct = this.allProducts.filter(product =>
+//     product.title.toLowerCase().includes(value.toLowerCase())
+//   );
+
+// }
 
 }

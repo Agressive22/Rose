@@ -35,15 +35,15 @@ button.shop{
 
 .container .bigBox{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 50px;
   margin-top: 50px;
 }
 .container .bigBox .box{
 display: flex;
     background-color: #fdecf6;
-    width: 240px;
-    height: 100px;
+    width: 217px;
+    height: 122px;
     border-radius: 12px;
     justify-content: space-around;
     align-items: center;
@@ -72,17 +72,19 @@ opacity: 0.6;
 
 // design special gifts
 .container .giftImages{
-    position: relative;
+       position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 22px;
+    justify-content: space-evenly;
+    row-gap: 15px;
 }
 
 //design gift one
 .container .giftImages .gift1 img{
 width: 301px;
 height: 440px;
+border-radius: 14px;
+
 }
 .container .giftImages .gift1 .details{
     position: absolute;
@@ -113,6 +115,7 @@ font-weight: bold;
 .container .giftImages .gift2 img{
   width: 956px;
   height: 440px;
+  border-radius: 14PX;
 }
 .container .giftImages .gift2 .details{
       position: absolute;
@@ -149,10 +152,14 @@ color: #160E4B;
     right: -154%;
 }
 .container .giftImages .gift2 .details .left-arrow , .right-arrow{
-  position: absolute;
-    bottom: -36px;
+     background-color: white;
+    color: #757F95;
+    position: absolute;
+    bottom: -22px;
     font-size: 26px;
-    width: 60px
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
 }
 
 // design gift 3
@@ -205,7 +212,7 @@ color: #160E4B;
 }
 .container .giftImages .gift3 .details button, .container .giftImages .gift4 .details button, .container .giftImages .gift5 .details button{
       position: absolute;
-    left: 44%;
+    left: 40%;
     bottom: -21px;
 }
 
@@ -272,10 +279,13 @@ padding: 15px;
 text-align: left;
 }
 .container .premium .box img , .container .popularItems .box img{
-width: 302px;
-height: 272px;
-margin-left: 20px;
-background-color: #fdecf6;
+      width: 302px;
+    height: 272px;
+    padding: 13px;
+    border-radius: 24px;
+    margin-left: 20px;
+    background-color: #fdecf6;
+    transition: all 0.6;
 }
 
 // continue design popular items
@@ -283,6 +293,48 @@ background-color: #fdecf6;
   display: flex;
   flex-wrap: wrap;
   margin-top: 100px;
+}
+.container .popularItems .box .image{
+  position: relative;
+
+}
+.container .popularItems .box .image::before{
+  content: "";
+    position: absolute;
+    width: 302px;
+    height: 272px;
+    left: 20px;
+    border-radius: 24px;
+    background-color: #F82BA9;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s;
+}
+.container .popularItems .box .image .icons{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 15px;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.3;
+}
+.container .popularItems .box .image .icons i{
+  width: 32px;
+  height: 32px;
+  color: white;
+  background-color: #F82BA9;
+  border-radius: 50%;
+  line-height: 32px;
+
+}
+.container .popularItems .box .image:hover::before{
+  opacity: 0.6;
+}
+.container .popularItems .box .image:hover .icons{
+  opacity: 1;
 }
 
 
@@ -296,14 +348,54 @@ background-color: #fdecf6;
 }
 .container .about .images{
   flex:1;
+  display: flex;
+      column-gap: 8px;
 }
-.container .about img{
-    width: 300px;
-    height: 300px;
-    border-radius: 24px;
-    border: none;
-    margin: 10px;
-    box-shadow: 0 0 6px black;
+.container .about .images .image1{
+  position: relative;
+}
+.container .about .images .image1::before{
+     content: "";
+    position: absolute;
+    width: 268px;
+    height: 363px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border-bottom-left-radius: 120px;
+    left: -14px;
+    top: -18px;
+    border: 4px solid #f82ba9;
+    transform: rotate(3deg);
+    z-index: -1;
+}
+.container .about .images .aboutImg1{
+  width: 302px;
+height: 344px;
+border-top-left-radius: 50px;
+border-top-right-radius: 120px;
+border-bottom-right-radius: 120px;
+border-bottom-left-radius: 120px;
+
+}
+.container .about .images .innerImages{
+  display: flex;
+  flex-direction: column;
+      row-gap: 8px;
+}
+.container .about .images .innerImages .aboutImg2{
+  width: 193px;
+height: 193px;
+border-radius: 50%;
+}
+.container .about .images .innerImages .aboutImg3{
+ width: 193px;
+height: 144px;
+border-top-left-radius: 50px;
+border-top-right-radius: 100px;
+border-bottom-right-radius: 100px;
+border-bottom-left-radius: 50px;
+
 }
 .container .about .text{
     display: flex;
@@ -328,10 +420,11 @@ width: 140px;
 .container .about .text .icons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 .container .about .text .icons .icon {
   display: flex;
+   width: 328.33px;
 }
 .container .about .text .icons .icon i{
     color: white;
@@ -384,15 +477,23 @@ width: 845px;
 
 .container .reviews{
   margin-top: 80px;
-display: flex;
-background-color: #f82ba9;
+background-color: #F82BA933;
+width: 1441px;
+height: 560px;
 padding: 15px;
 border-radius: 12px;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
 }
 .container .reviews .box{
 background-color: white;
-margin-left: 10px;
-border-radius: 10px;
+width: 302px;
+height: 344px;
+border-top-left-radius: 50px;
+border-top-right-radius: 100px;
+border-bottom-right-radius: 100px;
+border-bottom-left-radius: 100px;
 }
 .container .reviews .box .name{
   margin-top: 10px;
@@ -411,8 +512,8 @@ color: #160E4B;
 font-weight: bold;
 }
 .container .reviews .box .text{
-margin: 10px;
-color: #c3bebe;
+    margin: 37px 10px;
+    color: #c3bebe;
 }
 .container .reviews .box  .rate{
 margin: 10px 0;
@@ -421,12 +522,15 @@ text-align: left;
 .container .reviews .box .rate .star{
 color: #F82BA9;
 font-size: 20px;
-margin-left: 4px;
+margin-left: 8px;
+
 }
 .container .reviews .box  .rate .comment{
 color: #f82ba9b3;
 font-size: 25px;
 margin-left: 50px;
+width: 76px;
+height: 62px;
 }
 
 // start design certificated
