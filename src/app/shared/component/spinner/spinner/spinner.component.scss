@@ -1,0 +1,32 @@
+.overlay{
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,.4);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.loader{
+
+    width:70px;
+    height:70px;
+
+    border:7px solid #eee;
+    border-top:7px solid #F82BA9;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}

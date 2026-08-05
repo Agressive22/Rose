@@ -1,0 +1,83 @@
+.container{
+  margin: 50px auto;
+  padding: 15px;
+  text-align: center;
+  width: 1441px;
+}
+.container .reviews{
+    margin-top: 80px;
+    width: 100%;
+    min-height: 560px;
+    background-image: url("/images/backReview.png");
+    border-radius: 12px;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+.container .reviews .box{
+    width: 302px;
+    max-width: 100%;
+    min-height: 344px;
+
+    background-color: white;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    padding: 15px;
+}
+
+.container .reviews .box .name{
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container .reviews .box .name img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+.container .reviews .box .name img::before{
+  content: "";
+position: absolute;
+
+}
+
+.container .reviews .box .name h2{
+    font-size: 25px;
+    color: #160E4B;
+    font-weight: bold;
+}
+
+.container .reviews .box .text{
+   margin: 35px 0;
+    color: #c3bebe;
+    line-height: 1.6;
+    font-size: 20px;
+    text-align: left;
+    color: #757F95;
+}
+
+.container .reviews .box .rate{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container .reviews .box .rate .star{
+        color: #F82BA9;
+    text-align: left;
+    margin-left: -47px;
+    font-size: 16px;
+
+}
+
+.container .reviews .box .rate .comment{
+    color: #f82ba9b3;
+    width: 25%;
+}

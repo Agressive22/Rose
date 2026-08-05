@@ -3,7 +3,11 @@
 @if(authService.showLogIn()){
  <app-login></app-login>
 }
+@if (loadingService.loading()) {
 
+    <app-spinner></app-spinner>
+
+}
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>

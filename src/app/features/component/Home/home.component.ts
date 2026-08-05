@@ -3,13 +3,16 @@ import { ProductsService } from '../../services/productService/products.service'
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { LoginComponent } from '../login/login.component';
+import { ItemsComponent } from '../../../shared/items/items.component';
+import { ReviewsComponent } from '../../../shared/reviews/reviews.component';
+import { CertificateComponent } from '../../../shared/certificate/certificate.component';
 
 
 
 @Component({
   selector: 'app-home',
   standalone:true,
-  imports: [LoginComponent],
+  imports: [LoginComponent , ItemsComponent , ReviewsComponent , CertificateComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

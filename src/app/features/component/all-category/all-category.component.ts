@@ -5,6 +5,8 @@ import { ProductsService } from '../../services/productService/products.service'
 import { AuthService } from '../../services/auth/auth.service';
 
 
+
+
 @Component({
   selector: 'app-all-category',
   imports: [],
@@ -21,6 +23,7 @@ export class AllCategoryComponent {
   lastIndex:number = 9;
   pageSize = 9
   currentPage = 1
+
 
 constructor(private cat:CategoryService , private router:Router , private prodcut:ProductsService , private authService:AuthService){}
 

@@ -58,10 +58,9 @@ hr{
 
 
 // start desing data
-.container .data{
- width: 954px;
-
-}
+ .container .data{
+  width: 954px;
+ }
 .container .data .OuterBox {
   display: flex;
     flex-wrap: wrap;
@@ -124,24 +123,24 @@ width: 302px;
     cursor: pointer;
 }
 
-// .container .btns{
-//     display: flex;
-//     justify-content: space-around;
-// }
-// .container .btns .next ,.container .btns  .previous{
-//   width: 105px;
-//     padding: 10px;
-//     font-size: 20px;
-//     color: #F82BA9;
-//     font-weight: bold;
-//     border: none;
-//     background-color: #160E4B;
-//     text-transform: capitalize;
-//     cursor: pointer;
-// }
-// .container .btns button.next{
-//   font-size: 26px;
-// }
+.container .btns{
+    display: flex;
+    justify-content: space-around;
+}
+.container .btns .next ,.container .btns  .previous{
+  width: 105px;
+    padding: 10px;
+    font-size: 20px;
+    color: #F82BA9;
+    font-weight: bold;
+    border: none;
+    background-color: #160E4B;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.container .btns button.next{
+  font-size: 26px;
+}
 
 .pagination {
   display: flex;

@@ -5,6 +5,7 @@ import { AllCategoryComponent } from './features/component/all-category/all-cate
 import { ProductDetailsComponent } from './features/component/product-details/product-details.component';
 import { authGuard } from '../guard/auth.guard';
 import { CartComponent } from './features/component/Cart/cart.component';
+import { AboutComponent } from './features/component/about/about.component';
 
 
 
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path:'category',
     component:AllCategoryComponent,
+  },
+  {
+    path:'about',
+    component:AboutComponent
   },
   {
     path:'login',

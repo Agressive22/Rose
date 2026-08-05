@@ -7,35 +7,35 @@
   <!-- create Gifts Box -->
 <div class="bigBox">
   <div class="box">
-  <i class="fa-solid fa-gifts"></i>
+  <img src="images/icon1.png" alt="" class="icon">
   <div class="text">
     <h3>Gifts Box</h3>
     <span>30 items</span>
   </div>
 </div>
 <div class="box">
-  <i class="fa-solid fa-house"></i>
+    <img src="images/icon2.png" alt="" class="icon">
   <div class="text">
     <h3>Home & Living Gifts</h3>
     <span>25 items</span>
   </div>
 </div>
 <div class="box">
-<i class="fa-solid fa-gem"></i>
+  <img src="images/icon3.png" alt="" class="icon">
   <div class="text">
     <h3>Jewelry & Acessories</h3>
     <span>15 items</span>
   </div>
 </div>
 <div class="box">
-  <i class="fa-solid fa-child-dress"></i>
+   <img src="images/icon4.png" alt="" class="icon">
   <div class="text">
     <h3>Garment Care</h3>
     <span>05 items</span>
   </div>
 </div>
 <div class="box">
- <i class="fa-solid fa-stapler"></i>
+  <img src="images/icon5.png" alt="" class="icon">
   <div class="text">
     <h3>Office & Stationery</h3>
     <span>30 items</span>
@@ -164,12 +164,12 @@
   </div>
 
   <!-- start create popular items -->
+  <!-- <h2>Popular Items</h2> -->
    <div class="popularItems">
-    <!-- <h2>Popular Items</h2> -->
      @for(product of products.slice(14,27); track product._id ; let i = $index){
       <div class="box">
        <div class="image">
-         <img [src] = 'itemImages[i]' (click) = getId(product._id) title="img">
+         <img [src] = 'product.imgCover' (click) = getId(product._id) title="img">
          <div class="icons">
           <i class="fa-regular fa-eye" (click) = "buyProduct(product._id)"></i>
           <i [class]= "product.isFavourite? 'fa-solid fa-heart' : 'fa-regular fa-heart' " (click) = "changeColorHeart(product)"></i>
@@ -190,141 +190,12 @@
 
 
    <!-- start create about  -->
-    <div class="about">
-      <div class="images">
-        <div class="image1">
-          <img src="images/about1.png" alt="" class="aboutImg1">
-        </div>
-       <div class="innerImages">
-         <img src="images/about2.png" alt="" class="aboutImg2">
-        <img src="images/about3.png" alt="" class="aboutImg3">
-       </div>
+    <app-items></app-items>
 
 
-      </div>
-      <div class="text">
-        <p>About us</p>
-        <h2>We Provide Best And Quality Gifts Box Product For You</h2>
-        <button (click) = "getId(products[6]._id)">Discover More -></button>
-        <div class="icons">
-          <div class="icon">
-          <i class="fa-solid fa-check"></i>
-          <p>Streamlined Shipping Experience</p>
-        </div>
-        <div class="icon">
-          <i class="fa-solid fa-check"></i>
-          <p>Affordable Modern Design</p>
-        </div><div class="icon">
-          <i class="fa-solid fa-check"></i>
-          <p>Competitive Price & Easy To Shop</p>
-        </div><div class="icon">
-          <i class="fa-solid fa-check"></i>
-          <p>We Made Awesome Products</p>
-        </div>
-        </div>
-      </div>
-    </div>
-
-
-   <!-- start create gallery images -->
-    <div class="gallery">
-      <p>Our Gallery</p>
-      <h2>Let's Check Our Gallery</h2>
-     <div class="images">
-        @for(product of products.slice(15 , 18); track $index){
-        <img [src]="product.imgCover" alt="">
-      }
-      <img src="images/galler4.png" alt="" class="img4">
-      <img src="images/galler5.png" alt="">
-     </div>
-
-    </div>
-
-    <!-- create reviews -->
-     <div class="reviews">
-     <div class="box">
-       <div class="name">
-        <img src="images/review1.jpg" alt="">
-        <h2>Ahmed Nouh <p>Owenr</p></h2>
-      </div>
-       <p class="text">
-        Ab vel consequatur repellat eos omnis accusamus porro sunt dolorem.
-        Totam voluptas ullam ut. Neque accusantium voluptas rerum. Dolorem veritatis quo omnis nihil nulla harum eum.
-         Dignissimos laborum necessitatibus vero nihil.
-       </p>
-      <div class="rate">
-        @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
-          <i class="fa-solid fa-star , star"></i>
-        }
-        <i class="fa-solid fa-comments , comment"></i>
-      </div>
-     </div>
-
-      <div class="box">
-       <div class="name">
-        <img src="images/review2.jpg" alt="">
-        <h2>Yousef Nouh <p>Second Owner</p></h2>
-      </div>
-        <p class="text">
-        Ab vel consequatur repellat eos omnis accusamus porro sunt dolorem.
-        Totam voluptas ullam ut. Neque accusantium voluptas rerum. Dolorem veritatis quo omnis nihil nulla harum eum.
-         Dignissimos laborum necessitatibus vero nihil.
-       </p>
-      <div class="rate">
-        @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
-          <i class="fa-solid fa-star , star"></i>
-        }
-        <i class="fa-solid fa-comments , comment"></i>
-      </div>
-      </div>
-
-      <div class="box">
-       <div class="name">
-        <img src="images/review3.jpg" alt="">
-        <h2>Mohamed Nouh <p>Customer</p></h2>
-      </div>
-        <p class="text">
-        Ab vel consequatur repellat eos omnis accusamus porro sunt dolorem.
-        Totam voluptas ullam ut. Neque accusantium voluptas rerum. Dolorem veritatis quo omnis nihil nulla harum eum.
-         Dignissimos laborum necessitatibus vero nihil.
-       </p>
-      <div class="rate">
-         @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
-          <i class="fa-solid fa-star , star"></i>
-        }
-        <i class="fa-solid fa-comments , comment"></i>
-      </div>
-
-    </div>
-
-    <div class="box">
-     <div class="name">
-      <img src="images/review4.jpg" alt="">
-      <h2>Ibrahim Nouh <p>Customer</p></h2>
-    </div>
-      <p class="text">
-      Ab vel consequatur repellat eos omnis accusamus porro sunt dolorem.
-      Totam voluptas ullam ut. Neque accusantium voluptas rerum. Dolorem veritatis quo omnis nihil nulla harum eum.
-       Dignissimos laborum necessitatibus vero nihil.
-     </p>
-    <div class="rate">
-       @for(star of [1 ,2 ,3 ,4 ,5]; track $index){
-          <i class="fa-solid fa-star , star"></i>
-        }
-      <i class="fa-solid fa-comments , comment"></i>
-    </div>
-
-    </div>
-
-     </div>
+    <!-- start create reviews   -->
+     <app-reviews></app-reviews>
 
  <!-- create certification -->
-  <div class="certi">
-    <h2>Trusted by over <span>4.5k+</span> companies</h2>
-    <div class="images">
-      @for(img of certiImages; track $index){
-        <img [src]="img" alt="" >
-      }
-    </div>
-  </div>
+ <app-certificate></app-certificate>
 

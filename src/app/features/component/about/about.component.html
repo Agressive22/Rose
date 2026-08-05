@@ -1,0 +1,104 @@
+<app-items></app-items>
+<app-reviews></app-reviews>
+<div class="container">
+  <!-- design team -->
+<div class="team">
+  <p>Our Team</p>
+
+  <h2>
+    Meet Our Expert
+    <span>Team</span>
+  </h2>
+
+  <div class="outerBox">
+
+    @for (num of [1,2,3,4]; track num) {
+      <div class="box">
+        <img [src]="'images/team' + num + '.jpg'" alt="">
+
+        <h3>Ahmed Mohamed</h3>
+        <p>Senior Manager</p>
+
+        <hr>
+
+        <div class="icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+
+
+  <!-- // design service -->
+       <div class="service">
+
+         <div class="box">
+           <i class="fa-solid fa-truck"></i>
+           <div class="text">
+             <h2>Free Deleivery</h2>
+      <p>Orders Over $120</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <i class="fa-solid fa-arrows-rotate"></i>
+    <div class="text">
+      <h2>Get Refund</h2>
+      <p>Within 30 Days Returns</p>
+    </div>
+  </div>
+
+  <div class="box">
+    <i class="fa-solid fa-wallet"></i>
+    <div class="text">
+      <h2>Safe Payment</h2>
+      <p>100% Secure Payment</p>
+    </div>
+  </div>
+
+  <div class="box">
+   <i class="fa-solid fa-headset"></i>
+    <div class="text">
+      <h2>24/7 Support</h2>
+      <p>Feel Free To Call Us</p>
+    </div>
+  </div>
+
+ </div>
+
+ <!-- start design instgram  -->
+  <div class="instagram">
+    <h2>Instagram Rose</h2>
+   <div class="images">
+     <div class="image">
+      <img src="images/inst1.png" alt="">
+      <i class="fa-brands fa-square-instagram"></i>
+    </div>
+    <div class="image">
+      <img src="images/insta2.png" alt="">
+     <i class="fa-brands fa-square-instagram"></i>
+    </div>
+    <div class="image">
+      <img src="images/insta3.png" alt="">
+      <i class="fa-brands fa-square-instagram"></i>
+    </div>
+    <div class="image">
+      <img src="images/insta4.png" alt="">
+      <i class="fa-brands fa-square-instagram"></i>
+    </div>
+    <div class="image">
+      <img src="images/insta5.png" alt="">
+      <i class="fa-brands fa-square-instagram"></i>
+    </div>
+   </div>
+
+  </div>
+
+  <!-- design certificate -->
+   <app-certificate></app-certificate>
+</div>

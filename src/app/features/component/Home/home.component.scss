@@ -48,16 +48,21 @@ display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.container .bigBox .box i{
-      font-size: 42px;
-    color: white;
-    background-color: #f82ba9;
-    margin-left: 6px;
-    width: 77px;
-    height: 64px;
-    line-height: 60px;
-    border-radius: 30px;
+// .container .bigBox .box i{
+//       font-size: 42px;
+//     color: white;
+//     background-color: #f82ba9;
+//     margin-left: 6px;
+//     width: 77px;
+//     height: 64px;
+//     line-height: 60px;
+//     border-radius: 30px;
 
+// }
+.container .bigBox .box .icon{
+    width: 90px;
+    height: 90px;
+    background-color: #FEEDF7;
 }
 .container .bigBox .box .text{
     font-size: 20px;
@@ -579,28 +584,7 @@ width: 845px;
     margin-left: 10px;
 }
 
-// start design certificated
-.container .certi{
-  margin-top: 80px;
-  background-color: #FEEDF7;
-  border-radius: 12px;
-}
-.container .certi h2{
- font-size: 30px;
- color: #160E4B;
- margin: 50px 0;
 
- span{
-  color: #F82BA9;
- }
-}
-.container .certi .images img{
-  width: 146px;
-  height: 51px;
-  color: #c3bebe;
-  background-color: #FEEDF7;
-  margin-left: 20px;
-}
 
 
 /* ===========================
