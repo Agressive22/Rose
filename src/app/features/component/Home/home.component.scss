@@ -218,7 +218,11 @@ color: #160E4B;
 
 // start desing service
 .container .service{
-    height: 140px;
+       width: 94%;
+       height: 140px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 80px;
     display: flex;
     justify-content: space-evenly;
@@ -251,6 +255,7 @@ opacity: 0.8;
 .container .premium{
   margin-top: 100px;
 display: flex;
+justify-content: space-evenly;
 }
 .container .premium .uniqueBox{
 width: 301px;
@@ -275,10 +280,10 @@ padding: 15px;
      margin-bottom: 51px;
 }
 //continue designing premium gifts and start design popular items
-.container .premium .box , .container .popularItems .box{
+.container .premium .box {
 text-align: left;
 }
-.container .premium .box img , .container .popularItems .box img{
+.container .premium .box img{
       width: 302px;
     height: 272px;
     padding: 13px;
@@ -290,51 +295,75 @@ text-align: left;
 
 // continue design popular items
 .container .popularItems{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 80px;
 }
-.container .popularItems .box .image{
-  position: relative;
 
+.container .popularItems .box{
+    flex: 1 1 300px;
+    max-width: 320px;
+    text-align: left;
 }
+
+.container .popularItems .box .image{
+    position: relative;
+}
+
+.container .popularItems .box img{
+    width: 100%;
+    min-height: 280px;
+    max-height: 280px;
+    border-radius: 24px;
+    background-color: #fdecf6;
+    padding: 13px;
+    transition: .6s;
+}
+
 .container .popularItems .box .image::before{
-  content: "";
+    content: "";
     position: absolute;
-    width: 302px;
-    height: 272px;
-    left: 20px;
+    inset: 0;
     border-radius: 24px;
     background-color: #F82BA9;
     opacity: 0;
     z-index: 1;
-    transition: opacity 0.4s;
-}
-.container .popularItems .box .image .icons{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  column-gap: 15px;
-  opacity: 0;
-  z-index: 2;
-  transition: all 0.3;
-}
-.container .popularItems .box .image .icons i{
-  width: 32px;
-  height: 32px;
-  color: white;
-  background-color: #F82BA9;
-  border-radius: 50%;
-  line-height: 32px;
 
+    transition: opacity .4s;
 }
+
+.container .popularItems .box .image .icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    z-index: 2;
+    transition: .3s;
+}
+
+.container .popularItems .box .image .icons i{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    color: #F82BA9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .container .popularItems .box .image:hover::before{
-  opacity: 0.6;
+    opacity: .8;
 }
+
 .container .popularItems .box .image:hover .icons{
-  opacity: 1;
+    opacity: 1;
 }
 
 
@@ -476,61 +505,78 @@ width: 845px;
 // start design reviews
 
 .container .reviews{
-  margin-top: 80px;
-background-color: #F82BA933;
-width: 1441px;
-height: 560px;
-padding: 15px;
-border-radius: 12px;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
+    margin-top: 80px;
+    width: 100%;
+    min-height: 560px;
+
+    background-color: #F82BA933;
+    border-radius: 12px;
+
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
+
 .container .reviews .box{
-background-color: white;
-width: 302px;
-height: 344px;
-border-top-left-radius: 50px;
-border-top-right-radius: 100px;
-border-bottom-right-radius: 100px;
-border-bottom-left-radius: 100px;
+    width: 302px;
+    max-width: 100%;
+    min-height: 344px;
+
+    background-color: white;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    padding: 15px;
 }
+
 .container .reviews .box .name{
-  margin-top: 10px;
-  margin-left: 10px;
-display: flex;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
+
 .container .reviews .box .name img{
-width: 50px;
-height: 50px;
-border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
+
 .container .reviews .box .name h2{
-margin-left: 20px;
-font-size: 25px;
-color: #160E4B;
-font-weight: bold;
+    font-size: 25px;
+    color: #160E4B;
+    font-weight: bold;
 }
+
 .container .reviews .box .text{
-    margin: 37px 10px;
+    margin: 35px 0;
     color: #c3bebe;
+    line-height: 1.6;
 }
-.container .reviews .box  .rate{
-margin: 10px 0;
-text-align: left;
+
+.container .reviews .box .rate{
+    display: flex;
+    justify-content: center;
 }
+
 .container .reviews .box .rate .star{
-color: #F82BA9;
-font-size: 20px;
-margin-left: 8px;
+    color: #F82BA9;
+    font-size: 20px;
 
 }
-.container .reviews .box  .rate .comment{
-color: #f82ba9b3;
-font-size: 25px;
-margin-left: 50px;
-width: 76px;
-height: 62px;
+
+.container .reviews .box .rate .comment{
+    color: #f82ba9b3;
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 // start design certificated
@@ -669,24 +715,29 @@ height: 62px;
     width: auto;
   }
 
-  .container .premium .box img{
+  .container .premium .box{
     width: 100%;
     height: auto;
     margin-left: 0;
   }
 
-  /* Popular Items */
+  // popular Items
+  @media (max-width:768px){
 
-  .container .popularItems{
-    justify-content: center;
-    gap: 30px;
-  }
+    .container{
+        gap:20px;
+    }
 
-  .container .popularItems .box img{
+    .container .popularItems{
+        flex: 1 1 45%;
+    }
+     .container .popularItems .box img{
     width: 100%;
     height: auto;
     margin-left: 0;
   }
+
+}
 
 }
 @media (max-width:767px){
@@ -823,9 +874,10 @@ height: 62px;
   }
 
   .container .popularItems{
-    justify-content:center;
-    gap:30px;
-  }
+        flex: 1 1 100%;
+        max-width:100%;
+    }
+
 
   .container .about{
     flex-direction:column;

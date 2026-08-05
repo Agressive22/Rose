@@ -3,7 +3,10 @@
 
       <div class="search">
       <h2>Search</h2>
-      <input  type="search" placeholder="Search by the name">
+      <input
+  #searchInput
+  type="text"
+  (input)="search(searchInput.value)" title="new" placeholder="Search By Name">
     </div>
 
     <div class="category">
@@ -60,10 +63,10 @@
      @for(pr of filterProduct.slice(startIndex,lastIndex); track pr._id){
      <div class="box">
         <div class="image">
-          <img [src] = 'pr.imgCover' alt="" (click) = "sendId(pr._id) ">
+          <img [src] = 'pr.imgCover' alt="" >
           <div class="icons">
-          <i class="fa-regular fa-eye"></i>
-          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-eye" (click) = "showDetails(pr._id)"></i>
+          <i  [class]= " pr.isFavourite? 'fa-solid fa-heart heart' : 'fa-regular fa-heart' " (click) = "changeColorHeart(pr)"></i>
          </div>
         </div>
          <p class="specialGifts">Special Gift Box</p>
@@ -74,15 +77,28 @@
       </span>
       <br>
       <span class="price">{{pr.price}}$</span>
-      <button class="shop" (click) = 'navigation(pr._id)'><i class="fa-solid fa-bag-shopping  bag" ></i></button>
+      <button class="shop" (click) = "showDetails(pr._id)"><i class="fa-solid fa-bag-shopping  bag" ></i></button>
       </div>
     }
    </div>
-   <div class="btns">
+   <!-- <div class="btns">
      <button (click) = "previous()" class="previous">Previous</button>
    <button (click) ="next()" class="next">next</button>
-   </div>
+   </div> -->
+
+   <div class="pagination">
+
+  <button (click)="previous()"><i class="fa-solid fa-arrow-left"></i></button>
+
+  @for (page of pages; track page) {
+    <button (click)="goToPage(page)" [class.active]="page === currentPage"> {{ page }} </button>}
+
+  <button (click)="next()"><i class="fa-solid fa-arrow-right"></i></button>
+
+</div>
 
   </div>
+
+
 
 </div>

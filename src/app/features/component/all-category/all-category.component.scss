@@ -7,13 +7,14 @@ hr{
 
 .container {
   margin: 50px auto;
-  padding: 15px;
+  width: 1280px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .container .sideBar{
   width: 302px;
   min-height: 600px;
+
 }
 
 // design search input
@@ -67,7 +68,6 @@ hr{
     justify-content: space-evenly;
 }
 .container .data .OuterBox .box{
-    margin-left: 13px;
   }
 .container .data .OuterBox .box .image{
     position: relative;
@@ -93,20 +93,26 @@ hr{
   background-color: #F82BA9;
   border-radius: 50%;
   line-height: 32px;
-
+  cursor: pointer;
+}
+.container .data .OuterBox .box .image .icons i.heart{
+color: red;
+background-color: white;
 }
 .container .data .OuterBox .box .image::before{
-  content: "";
-  position: absolute;
-  width: 302px;
-  height: 272px;
-  border-radius: 20px;
-  background-color: #f82ba9;
-  opacity: 0;
-  transition: opacity 0.4s;
+    content: "";
+    position: absolute;
+    width: 312px;
+    height: 284px;
+    top: 0;
+    left: 0;
+    border-radius: 18px;
+    background-color: #f82ba9;
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 .container .data .OuterBox .box .image:hover::before{
-opacity: 0.6;
+opacity: 0.8;
 }
 .container .data .OuterBox .box .image:hover .icons{
   opacity: 1;
@@ -118,23 +124,49 @@ width: 302px;
     cursor: pointer;
 }
 
-.container .btns{
-    display: flex;
-    justify-content: space-around;
+// .container .btns{
+//     display: flex;
+//     justify-content: space-around;
+// }
+// .container .btns .next ,.container .btns  .previous{
+//   width: 105px;
+//     padding: 10px;
+//     font-size: 20px;
+//     color: #F82BA9;
+//     font-weight: bold;
+//     border: none;
+//     background-color: #160E4B;
+//     text-transform: capitalize;
+//     cursor: pointer;
+// }
+// .container .btns button.next{
+//   font-size: 26px;
+// }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
 }
-.container .btns .next ,.container .btns  .previous{
-  width: 105px;
-    padding: 10px;
-    font-size: 20px;
-    color: #F82BA9;
-    font-weight: bold;
-    border: none;
-    background-color: #160E4B;
-    text-transform: capitalize;
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #160E4B;
+  border-radius: 50%;
+  border: none;
+
+}
+
+.pagination .active {
+   width: 40px;
+    height: 40px;
     cursor: pointer;
-}
-.container .btns button.next{
-  font-size: 26px;
+    background-color: #F82BA9;
+    border-radius: 50%;
+    border: none;
 }
 
 

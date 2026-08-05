@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { ProductsService } from '../../services/productService/products.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
+import { LoginComponent } from '../login/login.component';
+
 
 
 @Component({
   selector: 'app-home',
   standalone:true,
-  imports: [],
+  imports: [LoginComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -22,11 +24,17 @@ certiImages:string[] = [];
 image:string = "/images/gift2.jpg";
 
 
-constructor(private prS:ProductsService , private router: Router , private authService:AuthService ){}
+constructor(private prS:ProductsService , private router: Router , public authService:AuthService ){
+
+
+}
 ngOnInit(){
     this.prS.getData().subscribe({
     next:(data:any)=>{
       this.products = data["products"]
+      for(let product of this.products){
+        product.isFavourite = false
+      }
 
     },
     error(err) {
@@ -47,12 +55,7 @@ getId(id:any){
   this.router.navigate(['/products',id])
 }
 buyProduct(id:any){
-  if(!this.authService.isLoggedIn){
-     this.router.navigate(["/login"])
-  }
-  else{
     this.router.navigate(['/products',id])
-  }
 }
 
 next(){
@@ -68,6 +71,10 @@ if(this.currnetIndex >0 ){
   this.currnetIndex--;
   this.image = this.giftImages[this.currnetIndex]
 }
+}
+changeColorHeart(product:any){
+ product.isFavourite = !product.isFavourite
+
 }
 
 

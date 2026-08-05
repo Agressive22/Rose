@@ -1,39 +1,40 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable, inject, signal } from '@angular/core';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  showLogIn = signal(false);
+  isLogged = signal(false)
 
   private http = inject(HttpClient);
 
-   private loggedIn = new BehaviorSubject<boolean>(
-    !!localStorage.getItem("token")
-  );
 
-  isLoggedIn = this.loggedIn.asObservable();
+
 
   login(data: any) {
+    this.isLogged.set(true)
     return this.http.post(
       'https://flower.elevateegy.com/api/v1/auth/signin',
       data
     );
+
   }
   signUp(data:any){
     return this.http.post('https://flower.elevateegy.com/api/v1/auth/signup',data)
   }
     saveToken(token:string){
     localStorage.setItem("token", token);
-    this.loggedIn.next(true);
   }
 
 
   logOut(){
     localStorage.removeItem("token");
-    this.loggedIn.next(false);
+    this.isLogged.set(false)
+
   }
 
 

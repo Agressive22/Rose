@@ -10,6 +10,9 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+
+
+
 private fb = inject(FormBuilder)
 constructor(private authService:AuthService){}
 loginForm = this.fb.group({
@@ -18,14 +21,23 @@ loginForm = this.fb.group({
 
 })
 
-signIn(){
+
+logIn(){
 this.authService.login(this.loginForm.value).subscribe({
    next: (res: any) => {
     this.authService.saveToken(res.token)
-
 }
 })
+
 }
+logOut(){
+  this.authService.logOut();
+}
+
+closeLogin(){
+  this.authService.showLogIn.set(false)
+}
+
 signUp() {
 
   const data = {
@@ -51,8 +63,4 @@ signUp() {
   });
 
 }
-logOut(){
-  this.authService.logOut();
-}
-
 }

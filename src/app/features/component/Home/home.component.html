@@ -1,3 +1,6 @@
+<!-- special case -->
+
+
 
 <div class="container">
 
@@ -163,13 +166,13 @@
   <!-- start create popular items -->
    <div class="popularItems">
     <!-- <h2>Popular Items</h2> -->
-     @for(product of products.slice(0,12); track product._id ; let i = $index){
+     @for(product of products.slice(14,27); track product._id ; let i = $index){
       <div class="box">
        <div class="image">
-         <img [src] = itemImages[i] (click) = getId(product._id) title="img">
+         <img [src] = 'itemImages[i]' (click) = getId(product._id) title="img">
          <div class="icons">
-          <i class="fa-regular fa-eye"></i>
-          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-eye" (click) = "buyProduct(product._id)"></i>
+          <i [class]= "product.isFavourite? 'fa-solid fa-heart' : 'fa-regular fa-heart' " (click) = "changeColorHeart(product)"></i>
          </div>
        </div>
          <p class="specialGifts">Special Gift Box</p>
@@ -185,7 +188,8 @@
      }
    </div>
 
-   <!-- start create about -->
+
+   <!-- start create about  -->
     <div class="about">
       <div class="images">
         <div class="image1">

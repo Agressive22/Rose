@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
@@ -6,6 +6,7 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CartService {
+  count = signal<number>(0)
 
   constructor(private http:HttpClient) { }
 
@@ -35,6 +36,19 @@ getCartData(){
   });
 
   return this.http.get('https://flower.elevateegy.com/api/v1/cart' , {headers} )
+}
+
+deleteItem(productId:any){
+const token = localStorage.getItem('token');
+
+  const headers = new HttpHeaders({
+  Authorization: `Bearer ${token}`
+  });
+
+  return this.http.delete(
+    `https://flower.elevateegy.com/api/v1/cart/${productId}`,
+    {headers}
+  );
 }
 
 }

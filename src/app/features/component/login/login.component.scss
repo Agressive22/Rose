@@ -1,67 +1,80 @@
-.form{
-    position: relative;
-    left: 32%;
-    margin: 100px 0;
-    width: 608px;
-    min-height: 390px;
-    background-color: rgba(249, 9, 157, 0.6509803922);
+.login{
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24%;
+    height: 50%;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 20px;
+    z-index: 1;
+    box-shadow: 0 0 20PX 8px black;
 }
 
-.form h2{
+
+.login h2{
 font-size: 30px;
 text-align: center;
 }
+.login h2 button{
+  padding:0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 17px;
+  text-align: center;
 
-.form button , .form  input{
-  border-radius: 14px;
-  padding: 18px;
-  text-align: left;
-  margin:24px  0 40px 10px ;
-  color: black;
-  background-color: white;
-  border: none;
 }
-.form button{
-background-color:#f9099d ;
-color: white;
-font-size: 26px;
-text-align: center;
-cursor: pointer;
+.login input{
+ background-color: white;
+ color: black;
+}
+.login button{
+  background-color:#f9099d ;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+.login button , .login input{
+     border-radius: 14px;
+    padding: 18px;
+    margin: 24px 0 14px 10px;
+    border: none;
+    box-shadow: 0 0 4px black;
 }
 
 
 /* ===========================
-   Form Responsive - Mobile
+   login Responsive - Mobile
 =========================== */
 
 @media (max-width:767px){
 
-  .form{
-    position: static;
-    left: 0;
+  .login{
     width: 95%;
     min-height: auto;
     margin: 40px auto;
     padding: 20px;
   }
 
-  .form h2{
+  .login h2{
     font-size: 24px;
   }
 
-  .form input,
-  .form button{
+  .login input,
+  .login button{
     width: 100%;
     margin: 15px 0;
     padding: 15px;
     box-sizing: border-box;
   }
 
-  .form button{
+  .login button{
     font-size: 20px;
   }
 
@@ -69,20 +82,19 @@ cursor: pointer;
 
 
 /* ===========================
-   Form Responsive - Tablet
+   login Responsive - Tablet
 =========================== */
 
 @media (min-width:768px) and (max-width:991px){
 
-  .form{
-    position: static;
-    left: 0;
+  .login{
+
     width: 80%;
     margin: 60px auto;
   }
 
-  .form input,
-  .form button{
+  .login input,
+  .login button{
     width: 100%;
     box-sizing: border-box;
   }
@@ -91,14 +103,12 @@ cursor: pointer;
 
 
 /* ===========================
-   Form Responsive - Laptop
+   login Responsive - Laptop
 =========================== */
 
 @media (min-width:992px) and (max-width:1200px){
 
-  .form{
-    position: static;
-    left: 0;
+  .login{
     width: 70%;
     margin: 80px auto;
   }

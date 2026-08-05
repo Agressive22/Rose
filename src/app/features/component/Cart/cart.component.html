@@ -5,6 +5,7 @@
      <h2 class="product">Product</h2>
     <img [src] = "product.product.imgCover" alt="">
     <h2>{{product.product.title}}</h2>
+    <button class="delete" (click) = "deleteItem(product.product._id)">x</button>
    </div>
   }
 </div>

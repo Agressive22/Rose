@@ -14,14 +14,14 @@
 
 <div class="search">
   <i class="fa-solid fa-magnifying-glass"></i>
-   @if (!(isloggedIn | async)) {
 
-  <button class="logIn">login</button>
-}
-
-@if (isloggedIn | async) {
-
-  <a routerLink="cart">Cart</a>
+@if (!authService.isLogged()) {
+  <button class="logIn" (click) = "openLogin()">login</button>
+}@else{
+  <a class="cart" routerLink="cart">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span>{{numberOfCartItems()}}</span>
+  </a>
 
   <button (click)="logout()" class="logOut">Logout</button>
 }
@@ -32,4 +32,4 @@
 
 
 
-<!-- <button class="login" routerLinkActive = "active" >Login</button> -->
+

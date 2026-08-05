@@ -4,6 +4,7 @@ import { ProductsService } from '../../services/productService/products.service'
 import { Product } from '../../interface/product';
 import { CategoryService } from '../../services/category/category.service';
 import { CartService } from '../../services/cartService/cart.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-product-details',
@@ -12,11 +13,12 @@ import { CartService } from '../../services/cartService/cart.service';
   styleUrl: './product-details.component.scss'
 })
 export class ProductDetailsComponent {
-constructor(private activate:ActivatedRoute , private productserive:ProductsService , private cartService:CartService) {}
+constructor(private activate:ActivatedRoute , private productserive:ProductsService , private cartService:CartService , private authService:AuthService) {}
 
 specificProduct! :Product;
 selectedImage :string = ''
 count:number = 1
+
 
 ngOnInit(){
 
@@ -34,6 +36,9 @@ ngOnInit(){
       console.log(err)
     }
   })
+
+
+
 }
 
 changeImage(image:string){
@@ -52,15 +57,24 @@ if(this.count>1 ){
 }
 
 addToCart(productId:string , quntity:number){
-  this.cartService.addToCart(productId ,quntity).subscribe({
+  if(this.authService.isLogged()){
+    this.cartService.addToCart(productId ,quntity).subscribe({
     next:(data:any)=>{
-      console.log(data)
+      console.log(data.numOfCartItems)
+        this.cartService.count.set(data.numOfCartItems);
     },
     error:(err)=>{
       console.log(err)
     }
   })
+
+  }
+  else{
+    this.authService.showLogIn.set(true)
+  }
 }
 
-}
 
+
+
+}

@@ -30,9 +30,10 @@ a{
   color: #F82BA9;
   width: 40px;
   height: 36px;
+  cursor: pointer;
 }
 
-.navBar  .search .logIn{
+.navBar  .search .logIn , .navBar .search .logOut{
   width: 80px;
   height: 45px;
   font-size: 16px;
@@ -41,6 +42,23 @@ a{
   background-color: #F82BA9;
   border: none;
   cursor: pointer;
+  margin-left: 12px;
+}
+.navBar .search .cart{
+  position: relative;
+}
+.navBar .search .cart  span{
+      position: absolute;
+    top: -12px;
+    left: 29px;
+    background-color: #F82BA9;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 19px;
 }
 
 .active {

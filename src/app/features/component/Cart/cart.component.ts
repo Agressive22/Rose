@@ -16,8 +16,22 @@ ngOnInit(){
   this.cartService.getCartData().subscribe({
     next:(data:any)=>{
     this.cartData = data.cart.cartItems
-    console.log(this.cartData)
     }
   })
+}
+
+deleteItem(productId:any){
+  console.log(productId)
+this.cartService.deleteItem(productId).subscribe({
+  next:(data:any)=>{
+
+  this.cartData = data.cart.cartItems
+    this.cartService.count.set(data.numOfCartItems)
+    console.log(data)
+  },
+  error:(err)=>{
+    console.log(err)
+  }
+})
 }
 }
